@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideNorth"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="32dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideSouth"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="32dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideWest"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="32dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideEast"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="32dp"/>
+
+
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|end"
+        android:text="@string/display_default"
+        android:textSize="48sp"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/guideNorth"
+        app:layout_constraintStart_toStartOf="@id/guideWest"
+        app:layout_constraintEnd_toEndOf="@id/guideEast" />
+
+    <Button
+        android:id="@+id/Click7"
+        android:tag="Click7"
+        android:text="@string/Click7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/display"
+        app:layout_constraintBottom_toTopOf="@id/Click4"
+        app:layout_constraintStart_toStartOf="@id/guideWest"
+        app:layout_constraintEnd_toStartOf="@id/Click8" />
+
+    <Button
+        android:id="@+id/Click8"
+        android:tag="Click8"
+        android:text="@string/Click8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/display"
+        app:layout_constraintBottom_toTopOf="@id/Click5"
+        app:layout_constraintStart_toEndOf="@id/Click7"
+        app:layout_constraintEnd_toStartOf="@id/Click9" />
+
+    <Button
+        android:id="@+id/Click9"
+        android:tag="Click9"
+        android:text="@string/Click9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/display"
+        app:layout_constraintBottom_toTopOf="@id/Click6"
+        app:layout_constraintStart_toEndOf="@id/Click8"
+        app:layout_constraintEnd_toStartOf="@id/Sqrt" />
+
+    <Button
+        android:id="@+id/Sqrt"
+        android:tag="Sqrt"
+        android:text="@string/Sqrt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/display"
+        app:layout_constraintBottom_toTopOf="@id/Divide"
+        app:layout_constraintStart_toEndOf="@id/Click9"
+        app:layout_constraintEnd_toStartOf="@id/Clear" />
+
+    <Button
+        android:id="@+id/Clear"
+        android:tag="Clear"
+        android:text="@string/Clear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/display"
+        app:layout_constraintBottom_toTopOf="@id/Percent"
+        app:layout_constraintStart_toEndOf="@id/Sqrt"
+        app:layout_constraintEnd_toEndOf="@id/guideEast" />
+
+    <Button
+        android:id="@+id/Click4"
+        android:tag="Click4"
+        android:text="@string/Click4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/Click7"
+        app:layout_constraintBottom_toTopOf="@id/Click1"
+        app:layout_constraintStart_toStartOf="@id/guideWest"
+        app:layout_constraintEnd_toStartOf="@id/Click5" />
+
+    <Button
+        android:id="@+id/Click5"
+        android:tag="Click5"
+        android:text="@string/Click5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/Click8"
+        app:layout_constraintBottom_toTopOf="@id/Click2"
+        app:layout_constraintStart_toEndOf="@id/Click4"
+        app:layout_constraintEnd_toStartOf="@id/Click6" />
+
+    <Button
+        android:id="@+id/Click6"
+        android:tag="Click6"
+        android:text="@string/Click6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/Click9"
+        app:layout_constraintBottom_toTopOf="@id/Click3"
+        app:layout_constraintStart_toEndOf="@id/Click5"
+        app:layout_constraintEnd_toStartOf="@id/Divide" />
+
+    <Button
+        android:id="@+id/Divide"
+        android:tag="Divide"
+        android:text="@string/Divide"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/Sqrt"
+        app:layout_constraintBottom_toTopOf="@id/Multiply"
+        app:layout_constraintStart_toEndOf="@id/Click6"
+        app:layout_constraintEnd_toStartOf="@id/Percent" />
+
+    <Button
+        android:id="@+id/Percent"
+        android:tag="Percent"
+        android:text="@string/Percent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/Clear"
+        app:layout_constraintBottom_toTopOf="@id/Minus"
+        app:layout_constraintStart_toEndOf="@id/Divide"
+        app:layout_constraintEnd_toEndOf="@id/guideEast" />
+
+    <Button
+        android:id="@+id/Click1"
+        android:tag="Click1"
+        android:text="@string/Click1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/Click4"
+        app:layout_constraintBottom_toTopOf="@id/Sign"
+        app:layout_constraintStart_toStartOf="@id/guideWest"
+        app:layout_constraintEnd_toStartOf="@id/Click2" />
+
+    <Button
+        android:id="@+id/Click2"
+        android:tag="Click2"
+        android:text="@string/Click2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/Click5"
+        app:layout_constraintBottom_toTopOf="@id/Click0"
+        app:layout_constraintStart_toEndOf="@id/Click1"
+        app:layout_constraintEnd_toStartOf="@id/Click3" />
+
+    <Button
+        android:id="@+id/Click3"
+        android:tag="Click3"
+        android:text="@string/Click3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/Click6"
+        app:layout_constraintBottom_toTopOf="@id/Decimal"
+        app:layout_constraintStart_toEndOf="@id/Click2"
+        app:layout_constraintEnd_toStartOf="@id/Multiply" />
+
+    <Button
+        android:id="@+id/Multiply"
+        android:tag="Multiply"
+        android:text="@string/Multiply"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/Divide"
+        app:layout_constraintBottom_toTopOf="@id/Plus"
+        app:layout_constraintStart_toEndOf="@id/Click3"
+        app:layout_constraintEnd_toStartOf="@id/Minus" />
+
+    <Button
+        android:id="@+id/Minus"
+        android:tag="Minus"
+        android:text="@string/Minus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/Percent"
+        app:layout_constraintBottom_toTopOf="@id/Equals"
+        app:layout_constraintStart_toEndOf="@id/Multiply"
+        app:layout_constraintEnd_toEndOf="@id/guideEast" />
+
+    <Button
+        android:id="@+id/Sign"
+        android:tag="Sign"
+        android:text="@string/Sign"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/Click1"
+        app:layout_constraintBottom_toBottomOf="@id/guideSouth"
+        app:layout_constraintStart_toStartOf="@id/guideWest"
+        app:layout_constraintEnd_toStartOf="@id/Click0" />
+
+    <Button
+        android:id="@+id/Click0"
+        android:tag="Click0"
+        android:text="@string/Click0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/Click2"
+        app:layout_constraintBottom_toBottomOf="@id/guideSouth"
+        app:layout_constraintStart_toEndOf="@id/Sign"
+        app:layout_constraintEnd_toStartOf="@id/Decimal" />
+
+    <Button
+        android:id="@+id/Decimal"
+        android:tag="Decimal"
+        android:text="@string/Decimal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/Click3"
+        app:layout_constraintBottom_toBottomOf="@id/guideSouth"
+        app:layout_constraintStart_toEndOf="@id/Click0"
+        app:layout_constraintEnd_toStartOf="@id/Plus" />
+
+    <Button
+        android:id="@+id/Plus"
+        android:tag="Plus"
+        android:text="@string/Plus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/Multiply"
+        app:layout_constraintBottom_toBottomOf="@id/guideSouth"
+        app:layout_constraintStart_toEndOf="@id/Decimal"
+        app:layout_constraintEnd_toStartOf="@id/Equals" />
+
+    <Button
+        android:id="@+id/Equals"
+        android:tag="Equals"
+        android:text="@string/Equals"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/Minus"
+        app:layout_constraintBottom_toBottomOf="@id/guideSouth"
+        app:layout_constraintStart_toEndOf="@id/Plus"
+        app:layout_constraintEnd_toEndOf="@id/guideEast" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
